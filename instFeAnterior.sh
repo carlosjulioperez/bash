@@ -22,6 +22,7 @@ jar -xvf $SOURCE/$CIA/fe.war
 
 chown -hR tomcat8: $DIR1 $DIR2
 
-cd $SOURCE
 ls -alrt $DIR
 tail -5 $DIR/fe/WEB-INF/classes/shiro.ini
+
+cd $SOURCE
