@@ -23,7 +23,13 @@ countdown()
 # Demo
 #countdown "00:00:05" && zenity --warning --text="Descanso corto" && countdown "00:00:05" && zenity --warning --text="¡A trabajar!"
 
-countdown "00:25:00" && zenity --warning --text="Descanso corto" && countdown "00:05:00" && zenity --warning --text="¡A trabajar!"
-countdown "00:25:00" && zenity --warning --text="Descanso corto" && countdown "00:05:00" && zenity --warning --text="¡A trabajar!"
-countdown "00:25:00" && zenity --warning --text="Descanso corto" && countdown "00:05:00" && zenity --warning --text="¡A trabajar!"
-countdown "00:25:00" && zenity --warning --text="Descanso corto" && countdown "00:15:00" && zenity --warning --text="Pomodoro terminado"
+m1="Descanso corto..."
+m2="Retorno al trabajo..."
+
+t1="00:25:00"
+t2="00:05:00"
+
+echo "Round 1" && countdown $t1 && zenity --warning --text="$m1" && echo $m1 && countdown $t2 && zenity --warning --text="$m2"
+echo "Round 2" && countdown $t1 && zenity --warning --text="$m1" && echo $m1 && countdown $t2 && zenity --warning --text="$m2"
+echo "Round 3" && countdown $t1 && zenity --warning --text="$m1" && echo $m1 && countdown $t2 && zenity --warning --text="$m2"
+echo "Round 4" && countdown $t1 && zenity --warning --text="$m1" && echo $m1 && countdown $t2 && zenity --warning --text="$m2" && echo "Fin de pomodoro..."
