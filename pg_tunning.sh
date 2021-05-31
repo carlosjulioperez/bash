@@ -1,0 +1,15 @@
+ALTER TABLE invoice SET (FILLFACTOR = 70);
+VACUUM FULL invoice;
+REINDEX TABLE invoice;
+
+ALTER TABLE inventory SET (FILLFACTOR = 70);
+VACUUM FULL inventory;
+REINDEX TABLE inventory;
+
+ALTER TABLE lots SET (FILLFACTOR = 70);
+VACUUM FULL lots;
+REINDEX TABLE lots;
+
+ALTER TABLE acc_trans SET (FILLFACTOR = 70);
+VACUUM FULL acc_trans;
+REINDEX TABLE acc_trans;
